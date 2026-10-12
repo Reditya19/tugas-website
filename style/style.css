@@ -1,0 +1,511 @@
+/* =========================================================
+   Portfolio Reditya - style.css
+   Tema warna: Cream
+   ========================================================= */
+
+:root {
+    --cream:        #fdf6e3; /* warna dasar cream */
+    --cream-dark:   #f3e6c8; /* cream lebih gelap untuk header */
+    --cream-card:   #fffdf6; /* cream terang untuk kartu */
+    --brown:        #7b5e3b; /* coklat untuk judul */
+    --brown-dark:   #574128; /* coklat tua */
+    --accent:       #c89b6a; /* aksen emas/coklat muda */
+    --text:         #4a3f35; /* warna teks utama */
+    --border:       #e8d8b8; /* garis pembatas */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--cream);
+    color: var(--text);
+    font-family: "Segoe UI", "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* ---------------- Header & Navigator ---------------- */
+
+header {
+    background-color: var(--cream-dark);
+    border-bottom: 1px solid var(--border);
+    padding: 2rem 1rem 1.25rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 1rem;
+    color: var(--brown-dark);
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.5rem 1.1rem;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    color: var(--brown);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+nav a:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+}
+
+nav a.active {
+    background-color: var(--brown);
+    border-color: var(--brown);
+    color: #fff;
+}
+
+/* ---------------- Konten Utama ---------------- */
+
+main {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 3rem;
+}
+
+h2 {
+    margin: 0 0 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent);
+    color: var(--brown);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+h3 {
+    margin: 0 0 0.5rem;
+    color: var(--brown-dark);
+    font-size: 1.15rem;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+/* ---------------- Kartu Project ---------------- */
+
+.project {
+    margin-bottom: 1.25rem;
+    padding: 1.1rem 1.35rem;
+    background-color: var(--cream-card);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(123, 94, 59, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(123, 94, 59, 0.15);
+}
+
+.project p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* ---------------- Footer ---------------- */
+
+footer {
+    padding: 1.25rem 1rem;
+    border-top: 1px solid var(--border);
+    background-color: var(--cream-dark);
+    color: var(--brown);
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+/* =========================================================
+   Bagian Kreatif - Home, About, Contact
+   ========================================================= */
+
+/* ---------------- Hero (Home) ---------------- */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    padding: 2rem;
+    background: radial-gradient(circle at top left, #fff8e7, var(--cream-card));
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(123, 94, 59, 0.08);
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hero-badge {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 0.4rem 1rem;
+    background-color: var(--cream-dark);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--brown);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.hero-title {
+    margin: 0;
+    padding: 0;
+    border: none;
+    color: var(--brown-dark);
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    line-height: 1.25;
+}
+
+.hero-subtitle {
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+.hero-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.7rem;
+    border-radius: 999px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.btn-primary {
+    background-color: var(--brown);
+    border: 1px solid var(--brown);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: var(--brown-dark);
+    border-color: var(--brown-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(87, 65, 40, 0.18);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--accent);
+    color: var(--brown);
+}
+
+.btn-outline:hover {
+    background-color: var(--accent);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.btn-full {
+    width: 100%;
+    text-align: center;
+    border: none;
+}
+
+/* Logo UTDI dibikin kecil */
+.hero-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-img img {
+    width: 110px;
+    height: auto;
+    padding: 0.6rem;
+    background-color: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(123, 94, 59, 0.12);
+    transition: transform 0.3s ease;
+}
+
+.hero-img img:hover {
+    transform: scale(1.05);
+}
+
+/* ---------------- Intro Card (Home) ---------------- */
+
+.intro-card {
+    padding: 1.6rem 2rem;
+    background-color: var(--cream-card);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(123, 94, 59, 0.08);
+}
+
+.intro-card h3 {
+    margin: 0 0 0.7rem;
+    font-size: 1.25rem;
+}
+
+.intro-card p {
+    margin: 0 0 0.9rem;
+}
+
+.link-more {
+    color: var(--brown);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.link-more:hover {
+    text-decoration: underline;
+}
+
+/* ---------------- About ---------------- */
+
+.about-intro {
+    margin-bottom: 2rem;
+}
+
+.about-intro p {
+    font-size: 1.05rem;
+}
+
+.info-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.2rem;
+    margin-bottom: 2.5rem;
+    padding: 1.6rem 2rem;
+    background-color: var(--cream-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(123, 94, 59, 0.08);
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.info-label {
+    font-size: 0.9rem;
+    color: var(--brown);
+}
+
+.info-value {
+    font-weight: 500;
+    color: var(--brown-dark);
+}
+
+.interest-section h2 {
+    margin-bottom: 1.2rem;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+}
+
+.skill-pill {
+    padding: 0.55rem 1.4rem;
+    background-color: var(--cream-dark);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--brown);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.skill-pill:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+}
+
+/* ---------------- Contact ---------------- */
+
+.contact-hero {
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.contact-hero h2 {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent);
+    font-size: 1.5rem;
+}
+
+.contact-hero p {
+    margin: 0;
+}
+
+.contact-wrap {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 1.8rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.4rem 1.6rem;
+    background-color: var(--cream-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(123, 94, 59, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(123, 94, 59, 0.14);
+}
+
+.contact-icon {
+    font-size: 1.7rem;
+}
+
+.contact-detail h3 {
+    margin: 0 0 0.35rem;
+}
+
+.contact-detail p,
+.contact-detail a {
+    margin: 0;
+    color: var(--text);
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.contact-detail a:hover {
+    text-decoration: underline;
+}
+
+.contact-form {
+    padding: 2rem;
+    background-color: var(--cream-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(123, 94, 59, 0.08);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 1.4rem;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: var(--brown-dark);
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background-color: #fffdf7;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(200, 155, 106, 0.16);
+}
+
+.form-note {
+    display: block;
+    margin-top: 0.9rem;
+    text-align: center;
+    color: var(--brown);
+}
+
+/* ---------------- Responsif ---------------- */
+
+@media screen and (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-badge {
+        align-self: center;
+    }
+
+    .hero-btns {
+        justify-content: center;
+    }
+
+    .contact-wrap {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav a {
+        padding: 0.45rem 0.85rem;
+        font-size: 0.9rem;
+    }
+
+    main {
+        padding: 1.5rem 1rem 2.5rem;
+    }
+
+    .hero {
+        padding: 1.5rem 1.2rem;
+    }
+
+    .intro-card,
+    .contact-form,
+    .info-strip {
+        padding: 1.4rem 1.2rem;
+    }
+}
